@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% macro random_int(len) -%}
+    {% for n in range(len) %}
+        {{ [0,1,2,3,4,5,6,7,8,9]|random }}
+    {% endfor %}
+    {%- endmacro %}
+
+    {% macro unique_id(count_groups=2, group_len=3, separator='-') -%}
+    {% set parts %}
+        {% for n in range(count_groups) -%}
+        {{ random_int(group_len) }}
+        {% endfor %}
+    {% endset %}
+    {{ parts|join(separator) }}
+    {%- endmacro %}
+
+    <title>EUL-AI</title>
+    <link rel="shortcut icon" href="static/images/favicon.png">
+    
+    <link href="static/inspinia-2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/inspinia-2.0/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="static/inspinia-2.0/css/animate.css" rel="stylesheet">
+    <link href="static/inspinia-2.0/css/style.css" rel="stylesheet">
+
+    <!-- Jasny -->
+    <link href="static/inspinia-2.0/css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="static/inspinia-2.0/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Footable -->
+    <link href="static/inspinia-2.0/css/plugins/footable/footable.core.css" rel="stylesheet">
+
+    <!-- Bootstrap Tour -->
+    <link href="static/inspinia-2.0/css/plugins/bootstrapTour/bootstrap-tour.min.css" rel="stylesheet">
+
+    <style>
+        .top-navigation .navbar-brand {
+            background: white;
+        }
+
+        /*.tour-backdrop {
+            height: 200%;
+            overflow: hidden;
+        }*/
+    
+        #backdropFallback{ top:0; left:0; height: 100vh; width: 100vw; }
+
+    </style>
+</head>
+
+<body class="top-navigation">
+
+    <!--div id="backdropFallback" class="tour-backdrop hide"></div-->
+
+
+
+    <div id="wrapper">
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom white-bg">
+                <nav class="navbar navbar-expand-lg navbar-static-top" role="navigation">
+
+                    <a href="#" class="navbar-brand">
+                        <!--img src="static/images/GSA-logo.png" width="45px" /-->
+                        <img src="static/images/eulai-logo.png" width="65px" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-reorder"></i>
+                    </button>
+
+                    <div class="navbar-collapse collapse" id="navbar">
+                        <!--img src="static/images/eulai-logo.png" width="65px" /-->
+                        <!--h2>EUL-AI</h2-->
+                        <ul class="nav navbar-nav mr-auto">
+                        </ul>
+                        <ul class="nav navbar-top-links navbar-right">
+                            <li>
+                                <img style="margin-top:15px;" src="static/images/anika_icon_2.png" width="190px" />
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="wrapper wrapper-content">
+                <div class="container">
+
+                    <div class="row">
+
+                        <!-- Upload Documents -->
+                        <div class="col-md-5">
+                            <div class="ibox animated fadeInDown" id="upload_eulas">
+                                <div class="ibox-title">
+                                    <div class="ibox-tools">
+                                        <a class="collapse-link">
+                                            <i class="fa fa-chevron-up"></i>
+                                        </a>
+                                        <a data-toggle="tooltip" data-placement="right" 
+                                           title="Click 'Select Eulas' to choose PDF or MS Word documents for clauses classification. Click 'Upload' to start the classification process.">
+                                            <i class="fa fa-info-circle"></i>
+                                        </a>
+                                    </div>
+                                    <h5>Upload EULA(s)</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    
+                                    <div id="file-list" style="overflow:scroll;height:150px;">
+                                        <p id="file-list-empty" class='text-muted'>Selected files...</p>
+                                        
+                                        <table class="table table-hover table-stripped">
+                                            <tbody id="file-names">
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <hr/>
+
+                                    <form id="file-uploader">
+                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                            <span class="btn btn-default btn-file">
+
+                                                <!-- TODO: Make more POPPY-->
+                                                <span class="fileinput-new">Select EULAs</span>
+                                                <span class="fileinput-exists">Select EULAs</span>
+                                                <input id="batch-upload"  multiple type="file" name="..."/>
+                                            </span>
+                                            <!--span class="fileinput-filename"></span>
+                                            <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">×</a-->
+                                        </div> 
+                                        <button class="btn btn-primary">Upload</button>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Currently Processing -->
+                        <div class="col-md-7">
+                            <div class="ibox animated fadeInDown" id="currently_processing_eulas">
+                                <div class="ibox-title">
+                                    <div class="ibox-tools">
+                                        <a class="collapse-link">
+                                            <i class="fa fa-chevron-up"></i>
+                                        </a>
+                                        <a data-toggle="tooltip" data-placement="right" 
+                                           title="Here you can see the progress of the parsing and classifying of the documents you have uploaded.">
+                                            <i class="fa fa-info-circle"></i>
+                                        </a>
+                                    </div>
+                                    <h5>Currently Processing EULAs</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <input type="text" 
+                                    class="form-control form-control-sm m-b-xs" 
+                                    id="filter-docs-processing"
+                                    placeholder="Search in table">
+ 
+                                    <div id="documents-processing-container">
+                                        
+                                        <table 
+                                            class="footable table table-stripped table-hover" 
+                                            data-page-size="4" 
+                                            data-sorting="true"
+                                            id="documents-processing"
+                                            data-filter=#filter-docs-processing>
+                                            <thead class="">
+                                                <tr>
+                                                    <th>File Name</th>
+                                                    <th>Progress</th>
+                                                    <th>Uploaded Time</th>
+                                                    <!--th data-type="numeric">File Size</th-->
+                                                </tr>
+                                            </thead>
+
+                                            <tbody id="documents-processing-body">
+
+                                            </tbody>
+                                            <tfoot>
+                                            <tr>
+                                                <td colspan="5">
+                                                    <ul class="pagination float-right"></ul>
+                                                </td>
+                                            </tr>
+                                            </tfoot>
+                                        </table>
+
+                                        <h2 class="text-center" id="table-empty-documents-processing">
+                                            <p><i class="fa fa-gears"></i>&nbsp;&nbsp;There are currently no documents being extracted.</p>
+                                        </h2>
+                                    </div> <!-- End #processing-container -->
+                                </div> <!-- End .ibox-content -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Previously Uploaded -->
+                        <div class="col-md-12">
+                            <div class="ibox animated fadeInDown" id="previously_uploaded_eulas">
+                                <div class="ibox-title">
+                                    <div class="ibox-tools">
+                                        <a class="collapse-link">
+                                            <i class="fa fa-chevron-up"></i>
+                                        </a>
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li><a id="export-csv-uploaded" href="#" class="dropdown-item">Export as .CSV</a>
+                                            </li>
+                                            <li><a id="export-json-uploaded" href="#" class="dropdown-item">Export as .JSON</a>
+                                            </li>
+                                        </ul>
+                                        <a data-toggle="tooltip" data-placement="right" 
+                                           title="This table will display all the EULAs that you have uploaded and classified in the past. Click the name of the file to view its clauses in detail.">
+                                            <i class="fa fa-info-circle"></i>
+                                        </a>
+                                    </div>
+                                    <h5>Previously Uploaded EULAs</h5>
+                                </div>
+                                <div class="ibox-content">
+                                    <input type="text" 
+                                    class="form-control form-control-sm m-b-xs" 
+                                    id="filter-previously-uploaded"
+                                    placeholder="Search in table">
+ 
+                                    <div id="previously-uploaded-container">
+                                        
+                                        <table 
+                                            class="footable table table-stripped table-hover" 
+                                            data-page-size="5" 
+                                            id="previously-uploaded"
+                                            data-limit-navigation=8
+                                            data-sorting="true"
+                                            data-filter=#filter-previously-uploaded>
+                                            <thead class="">
+                                                <tr>
+                                                    <th>File Name</th>
+                                                    <th>Uploaded Date</th>
+                                                    <th data-type="numeric"># of Clauses</th>
+                                                    <th data-type="numeric"># Unacceptable</th>
+                                                    <th data-type="numeric" data-breakpoints="md">Prediction Confidence</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody id="previously-uploaded-body">
+
+                                            </tbody>
+                                            <tfoot>
+                                            <tr>
+                                                <td colspan="5">
+                                                    <ul class="pagination float-right"></ul>
+                                                </td>
+                                            </tr>
+                                            </tfoot>
+                                        </table>
+
+                                        <h2 class="text-center" id="table-empty-previously-uploaded">
+                                            <p><i class="fa fa-upload"></i>&nbsp;&nbsp;No documents have been uploaded yet.</p>
+                                        </h2>
+                                    </div> <!-- End #processing-container -->
+
+                                </div> <!-- End .ibox-content -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <!-- Selected Clauses -->
+                        <div class="col-lg-7">
+                            <div class="ibox animated fadeInDown" id="selected-clauses-ibox">
+                                <div class="ibox-title">
+                                    <div class="ibox-tools">
+                                        <!-- Start ibox-tools -->
+                                        <a class="collapse-link">
+                                            <i class="fa fa-chevron-up"></i>
+                                        </a>
+                                        <!--a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                        <ul style="z-index: 9999999;" class="dropdown-menu dropdown-user">
+                                            <li><a href="#" class="dropdown-item">Export as JSON</a>
+                                            </li>
+                                            <li><a href="#" class="dropdown-item">Export as CSV</a>
+                                            </li>
+                                        </ul-->
+                                        <a data-toggle="tooltip" data-placement="right" 
+                                           title="Here you can view all the clauses of the selected license agreement. You can see wether they are classified as acceptable or not, and how confident the classification is. Click the clause to view its full text in detail.">
+                                            <i class="fa fa-info-circle"></i>
+                                        </a>
+                                    </div>
+                                    <h5>Selected EULA Clauses</h5>
+
+                                    <div>
+                                        <p id="clauses-fname" style="color:cornflowerblue;"></p>
+                                    </div>
+
+                                </div>
+                                <div class="ibox-content">
+                                    <input type="text" class="form-control form-control-sm m-b-xs"
+                                        id="filter-Selected-Eulas" placeholder="Search in table">
+
+                                    <div id="Selected-Eulas-container">
+
+                                        <table class="footable table table-hover" 
+                                               data-limit-navigation=5            
+                                               data-page-size="8"
+                                               data-sorting="true"
+                                               id="Selected-Eulas" 
+                                               data-filter=#filter-Selected-Eulas>
+
+                                            <thead>
+                                                <tr>
+                                                    <th>Clause Preview</th>
+                                                    <th data-type="numeric">Index</th>
+                                                    <th>Acceptable</th>
+                                                    <th data-type="numeric">Confidence</th>
+                                                    <th data-type="numeric" data-hide="phone">Clause Length</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody id="Selected-Eulas-body">
+
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="5">
+                                                        <ul class="pagination float-right"></ul>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                        
+                                        <h2 class="text-center" id="table-empty-clauses">
+                                            <p><i class="fa fa-search"></i>&nbsp;&nbsp;Select a EULA to view its individual clauses.</p>
+                                        </h2>
+
+                                    </div> <!-- End #Selected-Eulas-Container -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Selected Clause Text -->
+                        <div class="col-lg-5">
+                            <div class="ibox animated fadeInDown" id="selected_clause_text">
+                                <div class="ibox-title">
+                                    <h5>Selected Clause Viewer</h5>
+                                    <div class="ibox-tools">
+                                        <!-- Start ibox-tools -->
+                                        <a class="collapse-link">
+                                            <i class="fa fa-chevron-up"></i>
+                                        </a>
+                                        <!--a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <i class="fa fa-wrench"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-user">
+                                            <li><a href="#" class="dropdown-item">Export as JSON</a>
+                                            </li>
+                                            <li><a href="#" class="dropdown-item">Export as CSV</a>
+                                            </li>
+                                        </ul-->
+                                        <a data-toggle="tooltip" data-placement="right" 
+                                           title="View the full text of a particular clause. You can also click 'EULA Full Text' to view the contents of the EULA which contains this clause, as a whole.">
+                                            <i class="fa fa-info-circle"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                    <div class="ibox-content tabs-container">
+                                        
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li>
+                                                <a class="nav-link active" data-toggle="tab" href="#tab-1"><Strong>Clause Text</Strong></a>
+                                            </li>
+                                            <li>
+                                                <a class="nav-link" data-toggle="tab" href="#tab-2"><Strong>EULA Full Text</Strong></a>
+                                            </li>
+                                        </ul>
+                                        
+                                        <div class="tab-content">
+                                            <div role="tabpanel" id="tab-1" class="tab-pane active">
+                                                <div id="clause-viewer" 
+                                                     class="panel-body">
+                                                    <p id="viewer-empty-1" class="text-muted">Select a clause to view its full text...</p>
+                                                </div>
+                                            </div>
+                                            <div role="tabpanel" id="tab-2" class="tab-pane">
+                                                <div id="eula-viewer" 
+                                                     class="panel-body"
+                                                     style="overflow:scroll;height:400px;"
+                                                     >
+                                                    <p id="viewer-empty-2" class="text-muted">Select a clause to view its full text...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="footer">
+                <div class="float-right">
+                    <img src="static/images/eulai-logo.png" width="25px" />
+                </div>
+                <div>
+                    <strong>Copyright</strong> Anika Systems &copy; 2020
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="static/inspinia-2.0/js/jquery-3.1.1.min.js"></script>
+    <script src="static/inspinia-2.0/js/popper.min.js"></script>
+    <script src="static/inspinia-2.0/js/bootstrap.js"></script>
+    <script src="static/inspinia-2.0/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="static/inspinia-2.0/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="static/inspinia-2.0/js/inspinia.js"></script>
+    <script src="static/inspinia-2.0/js/plugins/pace/pace.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="static/inspinia-2.0/js/plugins/toastr/toastr.min.js"></script>
+
+    <!-- Jasny -->
+    <script src="static/inspinia-2.0/js/plugins/jasny/jasny-bootstrap.min.js"></script>
+
+    <!-- FooTable -->
+    <script src="static/inspinia-2.0/js/plugins/footable/footable.all.min.js"></script>
+
+    <!-- Bootstrap Tour -->
+    <script src="static/inspinia-2.0/js/plugins/bootstrapTour/bootstrap-tour.min.js"></script>
+
+    <!-- Cookies Plugin -->
+    <script src="static/js.cookie.min.js"></script>
+
+    <!-- Dotdot Plugin -->
+    <script src="static/inspinia-2.0/js/plugins/dotdotdot/jquery.dotdotdot.min.js"></script>
+
+    <!-- Global Variables -->
+    <script>
+        /* Declare variables used globally by components here. */
+
+        /* Contains all the EULAS that were fetched from the db. */
+        let VEULAS = {}; /* Key is ID of document. */
+
+        let VSELECTED_EULA_FULL_TEXT = ""; /* Full text of the selected EULA whos clauses are being viewed. */
+    </script>
+
+    <!-- Component Scripts -->
+    <script src="static/currently_processing_eulas.js?random={{unique_id()}}"></script>
+    <script src="static/previously_uploaded_eulas.js?random={{unique_id()}}"></script>
+    <script src="static/upload_eulas.js?random={{unique_id()}}"></script>
+    <script src="static/EULA.js?random={{unique_id()}}"></script>
+    <script src="static/selected_eula_clauses.js?random={{unique_id()}}"></script>
+    <script src="static/tutorial.js?random={{unique_id()}}"></script>
+
+    <!-- Init Toastr Notifications -->
+    <script>
+        $(document).ready(function(){
+            let toast = $('.toast');
+
+            $(window).bind("scroll", function () {
+                toast.css("top", window.pageYOffset + 20);
+            });
+            
+            setTimeout(function() {
+                toast.toast({
+                    delay: 5000,
+                    animation: true
+                });
+                toast.toast('show');
+            }, 2200);
+
+            toastr.options.closeButton = true;
+            toastr.options.closeMethod = 'fadeOut';
+            toastr.options.closeEasing = 'swing';
+            toastr.options.showEasing = 'linear';
+            toastr.options.timeOut = 3000;
+            toastr.options.extendedTimeOut = 0;;
+        });
+    </script>
+
+</body>
+
+</html>

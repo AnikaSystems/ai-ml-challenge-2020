@@ -1,0 +1,182 @@
+[
+    {
+        "text": "END USER LICENSE AGREEMENT IMPORTANT: PLEASE READ THIS END USER LICENSE AGREEMENT (LICENSE AGREEMENT) CAREFULLY BEFORE INSTALLING OR USING THE SOFTWARE. THE SOFTWARE IS COPYRIGHTED AND LICENSED (NOT SOLD). BY INSTALLING OR USING THE SOFTWARE, YOU ARE ACCEPTING AND AGREEING TO BE BOUND BY THE TERMS OF THIS LICENSE AGREEMENT. EXCEPT TO THE EXTENT THE SOFTWARE IS SUBJECT TO A SEPARATE WRITTEN SOFTWARE LICENSE AGREEMENT BETWEEN YOU AND KOFAX, THIS LICENSE AGREEMENT WILL SUPERSEDE ANY AND ALL LICENSE AGREEMENTS GOVERNING ANY LICENSES OF THE SOFTWARE PREVIOUSLY GRANTED BY KOFAX (AND ITS PREDECESSORS IN INTEREST) TO YOU.",
+        "acceptable": false,
+        "confidence": 0.64
+    },
+    {
+        "text": "Software License Grant.",
+        "acceptable": true,
+        "confidence": 0.98
+    },
+    {
+        "text": "License Grant. Subject to Your acceptance of the terms and conditions of this License Agreement and conditional on payment of all required fees, Kofax, Inc. (Kofax) grants You non-exclusive nontransferable licenses to use the Software, including any upgrades and new version releases that may be provided to You from time to time (as and when available as part of Kofaxs Software Maintenance and Support program), for Your internal use in object code form only and as otherwise provided in this License Agreement. Your licenses allow You to use the Software only for the purposes (production, evaluation, testing, demonstration, disaster recovery) and for the duration and extent for which You have paid the appropriate license fees, as evidenced by one or more valid order documents (a Sales Order) between You and Kofax or between You and an authorized Kofax reseller or distributor identifying the specific software and accompanying hardware (if any) products licensed (the Software), the limitations on use of the Software (such as volume limitations or concurrent client module use limitation), and any other then current licensing policies for the Software. You agree to exercise the same level of care against unauthorized use by, or disclosure to, third parties as You use with respect to Your own proprietary information of comparable importance, provided that in no event will You use less than reasonable care.",
+        "acceptable": false,
+        "confidence": 0.68
+    },
+    {
+        "text": "Restrictions. You will use the Software only for Your internal business purposes and only for Your direct benefit, and You will not attempt to use the Software, or any portion thereof, in excess of its licensed capacity. You will neither permit nor permit any third party to (1) reverse engineer, decompile, disassemble, decrypt, re-engineer, reverse assemble, reverse compile or otherwise translate or create, attempt to create the source code of the Software or perform any process intended to determine the source code for the Software, or (i1) modify, enhance or create derivative works based upon the Software or otherwise change the Software. Any modification, enhancement, derivative work or other improvement to the Software developed by You, whether with or without the consent of Kofax, will be the exclusive property of Kofax and subject to and governed by this License Agreement.",
+        "acceptable": false,
+        "confidence": 0.6
+    },
+    {
+        "text": "U.S. Government Entities. If You are a U.S. Government entity, then Your use, duplication or disclosure of the Software is subject to the following restricted rights clause: The Software is a Commercial Item, as that term is defined in 48 C.F.R. 2.101, consisting of commercial computer Licensed Software and computer software documentation, as such terms are used in 48 C.F.R. 252.227-7014(a)(1) and 48 C.F.R. 252.227-7014(a) (5), respectively, and used in 48 C.F.R. 12.212 and 48 C.F.R. 227.7202, as applicable, and all as amended from time to time. Consistent with 48 C.F.R. 12.212 and 48 C.F.R. 227.7202-1 through 227.7202-4, and other relevant sections of the Code of Federal Regulations, as applicable, and all as amended from time to time, all U.S. Government entities license the Software (1) only as Commercial Items, and (11) with only the rights explicitly set forth in this License Agreement and the Sales Order.",
+        "acceptable": true,
+        "confidence": 0.5
+    },
+    {
+        "text": "Third Party Software. Any portion of the Software that constitutes third party software, including software provided under a public license, is licensed to You subject to the terms and conditions of the software license agreements accompanying such third-party software, or as set forth in the thirdpartylicenses.txt file accompanying the Software.",
+        "acceptable": true,
+        "confidence": 0.69
+    },
+    {
+        "text": "Copy of Software. You may make one copy of the Software in machine-readable form for the purpose of backup in the event the installers or executables are damaged or destroyed; provided, that any backup copy of the Software must include all copyright, trademark, and other proprietary notices contained on the original.",
+        "acceptable": true,
+        "confidence": 0.65
+    },
+    {
+        "text": "Software Maintenance and Support. If You purchase Software Maintenance and Support for the Software, the Software Maintenance and Support will be provided as described in Kofaxs then current Software Maintenance and Support Agreement (Schedule), available upon request, and which is incorporated herein by this reference. Kofax will have no liability to You arising from or related to Your cessation of Software Maintenance and Support, whether from Your failure to timely renew Software Maintenance and Support or otherwise. If You elect to reinstate Software Maintenance and Support following expiration of the Software Maintenance and Support for whatever reason, You will (a) pay a reinstatement fee equal to the sum of the current annual Software Maintenance and Support fees, any unpaid Software Maintenance and Support fees from the date of expiration to the date of reinstatement, and an amount equal to one additional year of Software Maintenance and Support fees, and (b) apply all upgrades, enhancements and new releases to the Software needed to bring Your Software current with Kofaxs most current supported version of the Software. If you are current on Software Maintenance and Support you may reconfigure the Software subject your payment of Kofaxs standard rates for such reconfigurations. Software Maintenance and Support pricing will increase for renewal terms by an amount not to exceed 5% of the prior year term fee, provided that increases associated with additional software license purchases, if any, will be incorporated into the base for the purpose of calculation of each annual increase.",
+        "acceptable": false,
+        "confidence": 0.63
+    },
+    {
+        "text": "Intellectual Property. You acknowledge and agree that (1) the Software is licensed and not sold, (11) by accepting the licenses set forth in  this License Agreement, You acquire only the right to use the Software in accordance with the terms of this License Agreement, and that Kofax End User License Agreement January 2020  Kofax and/or its licensors will retain all rights, title, interest, including all associated patent, copyright, trademark, trade dress, trade secret and other proprietary rights in and to the Software, and (11) the Software, including the source and object codes, logic and structure, constitute valuable trade secrets of Kofax. You agree to secute and protect the Software with the same degree of care which You employ to protect Your own intellectual property of a similar nature, but in no event less than a reasonable standard of care.",
+        "acceptable": false,
+        "confidence": 0.55
+    },
+    {
+        "text": "Warranties. Subject to the limitations stated herein, Kofax warrants to You, the original end user, that, for a period of ninety (90) days from the date the Software is made available to You the Software, as delivered (a) will materially conform to Kofaxs then-current documentation for such Software, and (b) does not contain any computer worms or vituses. To be eligible for a remedy under this warranty You must report all warranted problems to Kofax in writing within the warranty period. Your exclusive remedy, and Kofaxs entire liability, under this warranty will be, at Kofaxs option, to provide a correction or a workaround for any reproducible errors ot other noncompliance, the replacement of the non-conforming Software, hardwate key, media and/or documentation, or a refund of the license fees You paid for the affected Software, subject to Your return of the Software. This limited warranty is void if You have modified or altered the Software, installed, operated, repaired or maintained the Software other than in accordance with the then-current documentation for such Software, subjected the Software to misuse, negligence, or accident, or cannot reasonably reproduce the error reported by You. Any replacement Software will be warranted for the remainder of the original warranty period or thirty (30) days, whichever is longer.",
+        "acceptable": false,
+        "confidence": 0.59
+    },
+    {
+        "text": "DISCLAIMER OF ADDITIONAL WARRANTIES. THE EXPRESS WARRANTIES ABOVE ARE IN LIEU OF ALL OTHER WARRANTIES, AND KOFAX MAKES NO REPRESENTATIONS OR WARRANTIES CONCERNING THE SOFTWARE, EXPRESSED OR IMPLIED, EXCEPT AS EXPRESSLY PROVIDED HEREIN, AND EXPRESSLY DISCLAIMS TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW ANY AND ALL OTHER WARRANTIES, INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT OR SKILL AND CARE. ANY IMPLIED WARRANTIES THAT BY LAW CANNOT BE DISCLAIMED ARE LIMITED IN DURATION TO THE GREATER OF (1) NINETY (0) DAYS FROM THE DATE OF THIS LICENSE AGREEMENT, OR (11) THE SHORTEST PERIOD PERMITTED BY LAW.",
+        "acceptable": true,
+        "confidence": 0.61
+    },
+    {
+        "text": "Intellectual Property Indemnification.",
+        "acceptable": true,
+        "confidence": 0.99
+    },
+    {
+        "text": "Indemnification. Kofax will indemnify and defend, at its own expense, any claim, suit or proceeding brought against You by a third party to the extent it is based upon a claim that Your use of the Software in the United States, Canada, Australia or the European Union pursuant to this License Agreement infringes upon any patent, copyright or trade secret of a third party. If You comply with the provisions hereof, Kofax will pay all damages, costs and expenses finally awarded to third parties against You in such action. If the Software is, ot in Kofax's opinion might be, held to infringe as set forth above, Kofax may, at its option (1) acquire the right for You to continue to use the Software upon the terms of this Agreement, (11) modify the Software to avoid or correct the infringement, or (iti) replace the Software. If none of such alternatives are, in Kofax's opinion, commercially reasonable, You will return the infringing Software to Kofax, and Kofax's sole liability, in addition to its obligation to pay awarded damages, costs and expenses as set forth above, will be to refund the license fees You paid to Kofax hereunder, depreciated on a 3-year, straight-line basis.",
+        "acceptable": false,
+        "confidence": 0.68
+    },
+    {
+        "text": "Limitations. The foregoing notwithstanding, Kofax will have no liability for any claim of infringement arising as a result of (1) Your use of the Software in combination with any items not supplied by Kofax, (it) any modification of the Software by You or at Your request, (iii) use of other than the latest revision of the Software if use of the latest revision would avoid the infringement, (iv) use of the Software outside the scope of the granted licenses or otherwise in violation of the terms of this License Agreement, or (v) any other act or omission by You which is a breach by You of any term of this License Agreement.",
+        "acceptable": false,
+        "confidence": 0.6
+    },
+    {
+        "text": "Conditions to Indemnification. Kofax will have the sole right to control the defense of, and to settle or compromise, any claim of infringement concerning the Software, and Kofaxs indemnification obligations are conditioned upon You (i) giving Kofax prompt written notice of any claim for which indemnity is sought, and (i) fully cooperating in the defense or settlement of any such claim. Subject to the foregoing, however, You, at Your own expense, may participate, through its attorneys or otherwise, in the investigation, trial and defense of any such claim, demand or action and any appeal therefrom.",
+        "acceptable": false,
+        "confidence": 0.61
+    },
+    {
+        "text": "Exclusive Remedy. The foregoing states Kofaxs entire liability and Your exclusive remedy concerning infringement of intellectual property rights, including but not limited to, patent, copyright and trade secret rights.",
+        "acceptable": false,
+        "confidence": 0.64
+    },
+    {
+        "text": "Limitation of Liability. UNDER NO CIRCUMSTANCES WILL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY PUNITIVE DAMAGES OR LOST PROFITS OR OTHER ECONOMIC LOSS, LOST OR DEGRADED DATA, INTERRUPTION OF BUSINESS, PROCUREMENT OF SUBSTITUTE PRODUCTS, OR FOR INDIRECT, SPECIAL, CONSEQUENTIAL, EXEMPLARY OR INCIDENTAL DAMAGES UINCLUDING WITHOUT LIMITATION ANY LOSS OF BUSINESS, REVENUE, GOODWILL OR USE), HOWEVER CAUSED AND REGARDLESS OF THEORY OF LIABILITY, ARISING OUT OF THE USE OF (OR INABILITY TO USE) THE SOFTWARE PROVIDED HEREUNDER, EVEN IF SUCH PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. THESE LIMITATIONS APPLY TO ALL CAUSES OF ACTION IN THE AGGREGATE, INCLUDING CAUSES OF ACTION ARISING OUT OF TERMINATION OF THIS LICENSE AGREEMENT, BREACH OF  Kofax End User License Agreement  January 2020  CONTRACT, BREACH OF WARRANTY, NEGLIGENCE, STRICT LIABILITY, MISREPRESENTATION, PRODUCT LIABILITY AND ANY OTHER TORTS. THE MAXIMUM AGGREGATE AMOUNT FOR WHICH EITHER PARTY MAY BE LIABLE UNDER THIS LICENSE AGREEMENT WILL BE LIMITED TO THE AMOUNTS ACTUALLY PAID OR PAYABLE BY YOU FOR THE SOFTWARE SUBJECT OF THE CLAIM FOR WHICH SUCH LIABILITY IS ASSERTED  DURING THE EIGHTEEN (18) MONTHS PRECEDING THE CLAIM. THIS SECTION WILL NOT APPLY, HOWEVER, TO A PARTYS BREACH OF CONFIDENTIALITY OR TO ANY CLAIM ARISING OUT OF YOUR BREACH OF THE LICENSE RESTRICTIONS SET FORTH IN THIS LICENSE AGREEMENT.",
+        "acceptable": false,
+        "confidence": 0.64
+    },
+    {
+        "text": "Trademarks. You recognize Kofaxs ownership in and title to all trademarks and/or service marks owned by Kofax and set forth in the Software, including any and all common law and registered rights throughout the world (hereinafter the Trademarks). No right, license or interest in or to any of the Trademarks is granted hereunder, and You agree that You will assert no such right, license or interest with respect to such Trademarks. Furthermore, You will not contest the validity of any of the Trademarks, claim adversely to Kofax any right, title or interest in and to the Trademarks and will not use, register, apply to register or aid a third party in registering the Trademarks during the term of this License Agreement or any time thereafter.",
+        "acceptable": false,
+        "confidence": 0.54
+    },
+    {
+        "text": "Term and Termination.",
+        "acceptable": true,
+        "confidence": 0.74
+    },
+    {
+        "text": "Term. The term of this License Agreement and Your licenses of the Software will commence as of the first to occur of the date of Your acceptance of this License Agreement or the date the Software is made available to You, and will continue until the termination ot expiration of the term of all of the licenses of the Software, unless earlier terminated at the end of any timeframe specified in a Sales Order ot as provided below.",
+        "acceptable": false,
+        "confidence": 0.67
+    },
+    {
+        "text": "Termination. Kofax may terminate this License Agreement (i) effective ten (10) days after written notice to You in the event that You fail to pay when due any fees for the Software as provided in a Sales Order, or (11) effective thirty (30) days after written notice to You in the event that You breach any other material provision of this License Agreement and You do not cure such failure to pay or breach within such thirty (30) day period.",
+        "acceptable": false,
+        "confidence": 0.67
+    },
+    {
+        "text": "Rights and Obligations upon Termination or Expiration. Upon termination of this License Agreement, all rights granted to You hereunder will immediately cease and You will (1) immediately discontinue all use of the Software, and (i1) destroy all copies of the Software. Termination of this License Agreement for any reason will not excuse Your obligation to pay in full any and all amounts due for the Software, nor will termination result in a refund of any fees paid by You for the Software.",
+        "acceptable": false,
+        "confidence": 0.64
+    },
+    {
+        "text": "Continuing Obligations. The terms and conditions in this License Agreement that by their nature and context are intended to survive any termination of this License Agreement, including, without limitation, Sections 4 (Intellectual Property), 6 (Intellectual Property Indemnification), 7 (Limitation of Liability), 8 (Trademarks), 9 (Term and Termination), 10 (Audit), and 11 (Miscellaneous), will survive such termination of this License Agreement for any reason and will be fully enforceable thereafter.",
+        "acceptable": false,
+        "confidence": 0.56
+    },
+    {
+        "text": "Audit. Kofax, upon thirty (30) days written notice to You and not more than once during each calendar year during the term of this License Agreement and once during the one (1) year period following the termination of this License Agreement, may enter upon Your premises during Your regular business hours to audit Your use of the Software. You agree to cooperate with Kofaxs audit and provide reasonable assistance and access to Your systems and information. If pursuant to any such audit, Kofax discovers any excess or unlicensed use of the Software, You agree to pay within thirty (30) days of written notification an amount equal to the sum of (a) the license fees which Kofax would have received for the additional licenses necessary to license such excess or unlicensed use of the Software at Kofaxs then current list pricing, and (b) if Your excess or unlicensed use of the Software exceeds 105% of the licensed use of the Software, all costs and expenses incurred by Kofax in conducting such audit. If You fail to pay such amounts within thirty G0) days of being invoiced for such amounts, Kofax may terminate this License Agreement, Your licenses of the Software, and any maintenance and support of the Software. You will be responsible for any of Your costs incurred in cooperating with any such audit.",
+        "acceptable": false,
+        "confidence": 0.63
+    },
+    {
+        "text": "Notices. All notices, demands or other communications under this License Agreement must be in writing and reference this License Agreement, and will be deemed effectively delivered to the party when delivered at the address for such party as last provided to the other, subject to modification by giving notice as provided herein. Notices may be delivered: (a) by email using a method that positively establishes receipt of the email by the recipient; (b) by personal, same or next day delivery; or (c) by commercial overnight courier with written verification of delivery. All notices so given will be deemed given upon the earlier of receipt or three (3) days after dispatch.",
+        "acceptable": false,
+        "confidence": 0.56
+    },
+    {
+        "text": "Governing Law. This License Agreement will be construed and governed in accordance with the internal laws of the State of Delaware, without regard to any rules of conflicts or choice of law provisions that would require the application of the laws of any other jurisdiction. The foregoing notwithstanding, however, if You acquired the Software in a country which is a member of the European Union, the laws of that country will govern the interpretation of this License Agreement and any claims arising hereunder, regardless of choice of laws principles of any other jurisdiction. In each case, this License Agreement will be construed and enforced without regard to the United Nations Convention on the International Sale of Goods or the Uniform Computer Information Transactions Act.  Kofax End User License Agreement January 2020",
+        "acceptable": false,
+        "confidence": 0.63
+    },
+    {
+        "text": "Severability. If any one or more of the provisions of this License Agreement is determined to be invalid, illegal, or unenforceable, the validity, legality, and enforceability of any of the remaining provisions or portions thereof will not be affected or impaired thereby and will nevertheless be binding between the parties. In the event any provision of this License Agreement is found to be invalid, illegal, or unenforceable, the parties will modify that provision in a manner that gives effect to the intent of the parties in entering into the License Agreement.",
+        "acceptable": true,
+        "confidence": 0.57
+    },
+    {
+        "text": "Waiver or Delay. No failure to exercise or delay by a party in exercising any right, power, or remedy under this License Agreement operates as a waiver of such right, power, or remedy. A single or partial exercise of any right, power, or remedy does not preclude any other or further exercise of that or any other right, power, or remedy. A waiver is not valid or binding on the party granting the waiver unless made in writing.",
+        "acceptable": false,
+        "confidence": 0.54
+    },
+    {
+        "text": "Export Laws. The Software is subject to United States export control jurisdiction, and may not be shipped, transferred, re- exported to any country or recipient, or used for any purpose prohibited by any applicable international and national laws that apply to the Software, including the U.S. Export Administration Regulations as well as end-user, end-use, and destination restrictions issued by the United States and other governments. You will not export or re-export the Software without first obtaining the appropriate U.S. or foreign government export licenses.",
+        "acceptable": false,
+        "confidence": 0.51
+    },
+    {
+        "text": "Entire Agreement. This License Agreement (including the Kofax Licensing Policies) constitutes the entire understanding and agreement between the parties with respect to the subject matter of this License Agreement and supersedes all previous agreements and communications between the parties concerning such subject matter. No modifications may be made to this License Agreement except in writing, signed by both patties.",
+        "acceptable": false,
+        "confidence": 0.57
+    },
+    {
+        "text": "Benefit of Agreement. This License Agreement will bind and inure to the benefit of the parties and their respective permitted successors and assigns.",
+        "acceptable": false,
+        "confidence": 0.66
+    },
+    {
+        "text": "Cumulative Remedies. Except as otherwise provided in this License Agreement, all remedies of the parties hereunder are non- exclusive and are in addition to all other available legal and equitable remedies.",
+        "acceptable": false,
+        "confidence": 0.57
+    },
+    {
+        "text": "Force Majeure. Neither party will be liable or deemed to be in default for any delay or failure in performance under this License Agreement (except for payment obligations) resulting, directly or indirectly, from acts of God, civil or military authority, acts of the public enemy, war, riots, civil disturbances, insurrections, accidents, fire, explosions, earthquakes, floods, the elements, strikes, labor disputes or any causes beyond its reasonable control; provided that the party failing to perform in any such event will promptly resume or remedy, as the case may be, the performance of its obligations hereunder as soon as practicable.",
+        "acceptable": false,
+        "confidence": 0.67
+    },
+    {
+        "text": "Construction of Agreement. Each party acknowledges that it has had the opportunity to review this License Agreement with legal counsel of its choice and agrees that in the event that this License Agreement or any other documents delivered in connection with the transactions contemplated by this License Agreement contain any ambiguity, such ambiguity will not be construed or interpreted against the drafting party. The titles and headings herein are for reference purposes only and will not in any manner limit the construction of this License Agreement, which will be considered as a whole.",
+        "acceptable": false,
+        "confidence": 0.62
+    },
+    {
+        "text": "Choice of Language. The original of this License Agreement has been written in English, which will be the controlling language in all respects. Any translations into any other language are for reference only and will have no legal or other effect.",
+        "acceptable": false,
+        "confidence": 0.54
+    },
+    {
+        "text": "Personal Data; Consent to Process and Transfer. You agree to comply with all applicable laws and regulations which may govern Your use of the Software, including, but not limited to, laws pertaining to the collection and use of personal data and to the transfer of data over state or other jurisdictional lines. You agree that Kofax, its affiliates, and agents may collect and use information you provide in relation to any support services performed with respect to the Software and requested by You. Kofax agrees not to use this information in a form that personally identifies You, except to the extent necessary to provide such services. You agree that Kofax may transfer Your information to the United States or other countries for use in accordance with this Section.  Kofax End User License Agreement January 2020",
+        "acceptable": false,
+        "confidence": 0.6
+    }
+]
